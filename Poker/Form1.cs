@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Poker
 {
@@ -1307,7 +1308,7 @@ namespace Poker
                 else
                 {
                     boardCells[i].BackColor = cell.Owner == Side.Player ? PlayerCellColor : AICellColor;
-                    picBoardCards[i].Image = GetCardImage();
+                    picBoardCards[i].Image = GetBoardImage(cell);
                     picBoardCards[i].Visible = true;
                     lblBoardValues[i].Text = cell.Value.ToString();
                 }
@@ -1321,7 +1322,7 @@ namespace Poker
                 if (i < playerHand.Count)
                 {
                     picPlayerHand[i].Visible = true;
-                    picPlayerHand[i].Image = GetCardImage();
+                    picPlayerHand[i].Image = GetPlayerHandImage(playerHand[i]);
                     picPlayerHand[i].BorderStyle = BorderStyle.FixedSingle;
 
                     if (i == selectedHandIndex)
@@ -1358,7 +1359,7 @@ namespace Poker
                 if (i < aiHand.Count)
                 {
                     picAIHand[i].Visible = true;
-                    picAIHand[i].Image = GetCardImage();
+                    picAIHand[i].Image = GetAIHandImage();
                 }
                 else
                 {
@@ -1371,7 +1372,7 @@ namespace Poker
 
         private void RefreshDeckUI()
         {
-            picDeck.Image = GetCardImage();
+            picDeck.Image = GetBackImage();
             lblDeckCount.Text = $"剩餘：{deck.Count}";
         }
 
@@ -1413,9 +1414,50 @@ namespace Poker
             }
         }
 
-        private Image GetCardImage()
+        private Image GetBackImage()
         {
             return Properties.Resources.back;
+        }
+
+        private Image GetFaceImageByValue(int cardValue)
+        {
+            switch (cardValue)
+            {
+                case 1:
+                    return Properties.Resources.card1;
+                case 2:
+                    return Properties.Resources.card2;
+                case 3:
+                    return Properties.Resources.card3;
+                case 4:
+                    return Properties.Resources.card4;
+                case 5:
+                    return Properties.Resources.card5;
+                case JokerCard:
+                    return Properties.Resources.joker;
+                default:
+                    return Properties.Resources.back;
+            }
+        }
+
+        private Image GetPlayerHandImage(int cardValue)
+        {
+            return GetFaceImageByValue(cardValue);
+        }
+
+        private Image GetAIHandImage()
+        {
+            return GetBackImage();
+        }
+
+        private Image GetBoardImage(Cell cell)
+        {
+            if (cell.Owner == Side.None)
+            {
+                return GetBackImage();
+            }
+
+            return GetFaceImageByValue(cell.Value);
         }
 
         #endregion
