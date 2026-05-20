@@ -272,6 +272,7 @@ namespace Poker
             deck.RemoveAt(0);
             hand.Add(card);
             actionTakenThisTurn = true;
+            PlayCardPlaySound();
 
             string who = owner == TurnOwner.Player ? "玩家" : "AI";
             if (owner == TurnOwner.Player && IsJoker(card))
@@ -355,6 +356,7 @@ namespace Poker
             hand.RemoveAt(handIndex);
             board[cellIndex] = new Cell { Owner = Side.None, Value = 0 };
             actionTakenThisTurn = true;
+            PlayCardPlaySound();
 
             if (owner == TurnOwner.Player)
             {
@@ -533,6 +535,7 @@ namespace Poker
 
             actionTakenThisTurn = true;
             selectedHandIndex = -1;
+            PlayCardPlaySound();
 
             string who = owner == TurnOwner.Player ? "玩家" : "AI";
             statusMessage = $"{who}在棋盤第 {cellIndex + 1} 格放置了 {value} 點。";
@@ -1260,6 +1263,7 @@ namespace Poker
             int playerScore = CalculateTotalScore(Side.Player);
             int aiScore = CalculateTotalScore(Side.AI);
             string result = GetWinnerText(playerScore, aiScore);
+            PlayResultSound(playerScore, aiScore);
 
             statusMessage = $"遊戲結束 — 玩家 {playerScore} 分，AI {aiScore} 分（{result}）";
 
@@ -1574,6 +1578,68 @@ namespace Poker
         private void btnRestart_Click(object sender, EventArgs e)
         {
             StartNewGame();
+        }
+
+        #endregion
+
+        #region 音效
+
+        private void PlayCardPlaySound()
+        {
+            try
+            {
+                using (SoundPlayer player = new SoundPlayer(Properties.Resources.cardplay))
+                {
+                    player.Play();
+                }
+            }
+            catch
+            {
+            }
+        }
+
+        private void PlayWinSound()
+        {
+            try
+            {
+                using (SoundPlayer player = new SoundPlayer(Properties.Resources.win))
+                {
+                    player.Play();
+                }
+            }
+            catch
+            {
+            }
+        }
+
+        private void PlayLoseSound()
+        {
+            try
+            {
+                using (SoundPlayer player = new SoundPlayer(Properties.Resources.lose))
+                {
+                    player.Play();
+                }
+            }
+            catch
+            {
+            }
+        }
+
+        private void PlayResultSound(int playerScore, int aiScore)
+        {
+            if (playerScore > aiScore)
+            {
+                PlayWinSound();
+            }
+            else if (playerScore < aiScore)
+            {
+                PlayLoseSound();
+            }
+            else
+            {
+                PlayCardPlaySound();
+            }
         }
 
         #endregion
