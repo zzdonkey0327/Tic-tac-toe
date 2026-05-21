@@ -61,11 +61,11 @@ namespace Poker
             this.picPlayer1 = new System.Windows.Forms.PictureBox();
             this.picPlayer2 = new System.Windows.Forms.PictureBox();
             this.grpAIHand = new System.Windows.Forms.GroupBox();
-            this.lblAIHandInfo = new System.Windows.Forms.Label();
-            this.flpAIHand = new System.Windows.Forms.FlowLayoutPanel();
-            this.picAI0 = new System.Windows.Forms.PictureBox();
             this.picAI1 = new System.Windows.Forms.PictureBox();
+            this.picAI0 = new System.Windows.Forms.PictureBox();
+            this.lblAIHandInfo = new System.Windows.Forms.Label();
             this.picAI2 = new System.Windows.Forms.PictureBox();
+            this.flpAIHand = new System.Windows.Forms.FlowLayoutPanel();
             this.grpActions = new System.Windows.Forms.GroupBox();
             this.btnRestart = new System.Windows.Forms.Button();
             this.btnDrawCard = new System.Windows.Forms.Button();
@@ -98,10 +98,10 @@ namespace Poker
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer2)).BeginInit();
             this.grpAIHand.SuspendLayout();
-            this.flpAIHand.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAI0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAI1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAI0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAI2)).BeginInit();
+            this.flpAIHand.SuspendLayout();
             this.grpActions.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -121,9 +121,9 @@ namespace Poker
             // lblMessage
             // 
             this.lblMessage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblMessage.Location = new System.Drawing.Point(320, 26);
+            this.lblMessage.Location = new System.Drawing.Point(299, 20);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(600, 28);
+            this.lblMessage.Size = new System.Drawing.Size(600, 41);
             this.lblMessage.TabIndex = 2;
             this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -149,7 +149,7 @@ namespace Poker
             // 
             this.grpBoard.Controls.Add(this.tblBoard);
             this.grpBoard.Font = new System.Drawing.Font("微軟正黑體", 11F);
-            this.grpBoard.Location = new System.Drawing.Point(12, 82);
+            this.grpBoard.Location = new System.Drawing.Point(311, 89);
             this.grpBoard.Name = "grpBoard";
             this.grpBoard.Size = new System.Drawing.Size(420, 420);
             this.grpBoard.TabIndex = 1;
@@ -484,9 +484,9 @@ namespace Poker
             this.grpDeck.Controls.Add(this.lblDeckTitle);
             this.grpDeck.Controls.Add(this.picDeck);
             this.grpDeck.Font = new System.Drawing.Font("微軟正黑體", 11F);
-            this.grpDeck.Location = new System.Drawing.Point(450, 82);
+            this.grpDeck.Location = new System.Drawing.Point(12, 86);
             this.grpDeck.Name = "grpDeck";
-            this.grpDeck.Size = new System.Drawing.Size(220, 160);
+            this.grpDeck.Size = new System.Drawing.Size(256, 160);
             this.grpDeck.TabIndex = 2;
             this.grpDeck.TabStop = false;
             this.grpDeck.Text = "共用牌庫";
@@ -512,7 +512,7 @@ namespace Poker
             // picDeck
             // 
             this.picDeck.Image = global::Poker.Properties.Resources.back;
-            this.picDeck.Location = new System.Drawing.Point(110, 24);
+            this.picDeck.Location = new System.Drawing.Point(126, 34);
             this.picDeck.Name = "picDeck";
             this.picDeck.Size = new System.Drawing.Size(90, 120);
             this.picDeck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -524,9 +524,9 @@ namespace Poker
             this.grpPlayerHand.Controls.Add(this.lblPlayerHandInfo);
             this.grpPlayerHand.Controls.Add(this.flpPlayerHand);
             this.grpPlayerHand.Font = new System.Drawing.Font("微軟正黑體", 11F);
-            this.grpPlayerHand.Location = new System.Drawing.Point(450, 252);
+            this.grpPlayerHand.Location = new System.Drawing.Point(750, 219);
             this.grpPlayerHand.Name = "grpPlayerHand";
-            this.grpPlayerHand.Size = new System.Drawing.Size(498, 120);
+            this.grpPlayerHand.Size = new System.Drawing.Size(299, 181);
             this.grpPlayerHand.TabIndex = 3;
             this.grpPlayerHand.TabStop = false;
             this.grpPlayerHand.Text = "玩家手牌";
@@ -534,7 +534,7 @@ namespace Poker
             // lblPlayerHandInfo
             // 
             this.lblPlayerHandInfo.AutoSize = true;
-            this.lblPlayerHandInfo.Location = new System.Drawing.Point(16, 28);
+            this.lblPlayerHandInfo.Location = new System.Drawing.Point(16, 33);
             this.lblPlayerHandInfo.Name = "lblPlayerHandInfo";
             this.lblPlayerHandInfo.Size = new System.Drawing.Size(125, 28);
             this.lblPlayerHandInfo.TabIndex = 1;
@@ -545,9 +545,9 @@ namespace Poker
             this.flpPlayerHand.Controls.Add(this.picPlayer0);
             this.flpPlayerHand.Controls.Add(this.picPlayer1);
             this.flpPlayerHand.Controls.Add(this.picPlayer2);
-            this.flpPlayerHand.Location = new System.Drawing.Point(140, 22);
+            this.flpPlayerHand.Location = new System.Drawing.Point(21, 87);
             this.flpPlayerHand.Name = "flpPlayerHand";
-            this.flpPlayerHand.Size = new System.Drawing.Size(340, 88);
+            this.flpPlayerHand.Size = new System.Drawing.Size(252, 88);
             this.flpPlayerHand.TabIndex = 0;
             // 
             // picPlayer0
@@ -591,12 +591,36 @@ namespace Poker
             this.grpAIHand.Controls.Add(this.lblAIHandInfo);
             this.grpAIHand.Controls.Add(this.flpAIHand);
             this.grpAIHand.Font = new System.Drawing.Font("微軟正黑體", 11F);
-            this.grpAIHand.Location = new System.Drawing.Point(450, 382);
+            this.grpAIHand.Location = new System.Drawing.Point(12, 338);
             this.grpAIHand.Name = "grpAIHand";
-            this.grpAIHand.Size = new System.Drawing.Size(498, 120);
+            this.grpAIHand.Size = new System.Drawing.Size(282, 168);
             this.grpAIHand.TabIndex = 4;
             this.grpAIHand.TabStop = false;
             this.grpAIHand.Text = "AI 手牌";
+            // 
+            // picAI1
+            // 
+            this.picAI1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picAI1.Image = global::Poker.Properties.Resources.back;
+            this.picAI1.Location = new System.Drawing.Point(3, 3);
+            this.picAI1.Name = "picAI1";
+            this.picAI1.Size = new System.Drawing.Size(70, 82);
+            this.picAI1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAI1.TabIndex = 1;
+            this.picAI1.TabStop = false;
+            this.picAI1.Tag = "1";
+            // 
+            // picAI0
+            // 
+            this.picAI0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picAI0.Image = global::Poker.Properties.Resources.back;
+            this.picAI0.Location = new System.Drawing.Point(79, 3);
+            this.picAI0.Name = "picAI0";
+            this.picAI0.Size = new System.Drawing.Size(70, 82);
+            this.picAI0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAI0.TabIndex = 0;
+            this.picAI0.TabStop = false;
+            this.picAI0.Tag = "0";
             // 
             // lblAIHandInfo
             // 
@@ -606,40 +630,6 @@ namespace Poker
             this.lblAIHandInfo.Size = new System.Drawing.Size(146, 28);
             this.lblAIHandInfo.TabIndex = 1;
             this.lblAIHandInfo.Text = "AI 手牌：0 張";
-            // 
-            // flpAIHand
-            // 
-            this.flpAIHand.Controls.Add(this.picAI0);
-            this.flpAIHand.Controls.Add(this.picAI1);
-            this.flpAIHand.Controls.Add(this.picAI2);
-            this.flpAIHand.Location = new System.Drawing.Point(140, 22);
-            this.flpAIHand.Name = "flpAIHand";
-            this.flpAIHand.Size = new System.Drawing.Size(340, 88);
-            this.flpAIHand.TabIndex = 0;
-            // 
-            // picAI0
-            // 
-            this.picAI0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picAI0.Image = global::Poker.Properties.Resources.back;
-            this.picAI0.Location = new System.Drawing.Point(3, 3);
-            this.picAI0.Name = "picAI0";
-            this.picAI0.Size = new System.Drawing.Size(70, 82);
-            this.picAI0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picAI0.TabIndex = 0;
-            this.picAI0.TabStop = false;
-            this.picAI0.Tag = "0";
-            // 
-            // picAI1
-            // 
-            this.picAI1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picAI1.Image = global::Poker.Properties.Resources.back;
-            this.picAI1.Location = new System.Drawing.Point(79, 3);
-            this.picAI1.Name = "picAI1";
-            this.picAI1.Size = new System.Drawing.Size(70, 82);
-            this.picAI1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picAI1.TabIndex = 1;
-            this.picAI1.TabStop = false;
-            this.picAI1.Tag = "1";
             // 
             // picAI2
             // 
@@ -653,14 +643,24 @@ namespace Poker
             this.picAI2.TabStop = false;
             this.picAI2.Tag = "2";
             // 
+            // flpAIHand
+            // 
+            this.flpAIHand.Controls.Add(this.picAI1);
+            this.flpAIHand.Controls.Add(this.picAI0);
+            this.flpAIHand.Controls.Add(this.picAI2);
+            this.flpAIHand.Location = new System.Drawing.Point(10, 74);
+            this.flpAIHand.Name = "flpAIHand";
+            this.flpAIHand.Size = new System.Drawing.Size(246, 88);
+            this.flpAIHand.TabIndex = 0;
+            // 
             // grpActions
             // 
             this.grpActions.Controls.Add(this.btnRestart);
             this.grpActions.Controls.Add(this.btnDrawCard);
             this.grpActions.Font = new System.Drawing.Font("微軟正黑體", 11F);
-            this.grpActions.Location = new System.Drawing.Point(12, 512);
+            this.grpActions.Location = new System.Drawing.Point(750, 431);
             this.grpActions.Name = "grpActions";
-            this.grpActions.Size = new System.Drawing.Size(936, 72);
+            this.grpActions.Size = new System.Drawing.Size(299, 72);
             this.grpActions.TabIndex = 5;
             this.grpActions.TabStop = false;
             this.grpActions.Text = "操作";
@@ -689,7 +689,7 @@ namespace Poker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(960, 600);
+            this.ClientSize = new System.Drawing.Size(1186, 539);
             this.Controls.Add(this.grpActions);
             this.Controls.Add(this.grpAIHand);
             this.Controls.Add(this.grpPlayerHand);
@@ -736,10 +736,10 @@ namespace Poker
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer2)).EndInit();
             this.grpAIHand.ResumeLayout(false);
             this.grpAIHand.PerformLayout();
-            this.flpAIHand.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picAI0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAI1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAI0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAI2)).EndInit();
+            this.flpAIHand.ResumeLayout(false);
             this.grpActions.ResumeLayout(false);
             this.ResumeLayout(false);
 

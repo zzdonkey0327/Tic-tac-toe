@@ -77,10 +77,10 @@ namespace Poker
             "斜線＼", "斜線／"
         };
 
-        private static readonly Color PlayerCellColor = Color.MistyRose;
-        private static readonly Color AICellColor = Color.LightSteelBlue;
-        private static readonly Color EmptyCellColor = Color.LightGray;
-        private static readonly Color SelectedHandBorderColor = Color.Goldenrod;
+        private static readonly Color PlayerCellColor = Color.FromArgb(255, 228, 225);   // 暖紅粉
+        private static readonly Color AICellColor = Color.FromArgb(220, 235, 255);       // 冷藍
+        private static readonly Color EmptyCellColor = Color.FromArgb(235, 235, 235);    // 中性灰
+        private static readonly Color SelectedHandBorderColor = Color.FromArgb(255, 196, 60); // 金黃
 
         private Panel[] boardCells;
         private PictureBox[] picBoardCards;
@@ -119,9 +119,141 @@ namespace Poker
         {
             InitializeComponent();
             InitializeControlArrays();
+            ApplyCardGameTheme();
             WireBoardCellEvents();
             WireHandCardEvents();
             StartNewGame();
+        }
+
+        private void ApplyCardGameTheme()
+        {
+            Color formBg = Color.FromArgb(245, 242, 235);          // 整體淺米色
+            Color statusBg = Color.FromArgb(250, 248, 243);        // 狀態列
+            Color boardAreaBg = Color.FromArgb(232, 226, 214);     // 棋盤外框區
+            Color playerZoneBg = Color.FromArgb(255, 244, 240);    // 玩家區暖色
+            Color aiZoneBg = Color.FromArgb(240, 247, 255);        // AI 區冷色
+            Color deckZoneBg = Color.FromArgb(248, 244, 236);      // 牌庫區
+            Color actionZoneBg = Color.FromArgb(246, 241, 232);    // 操作區
+            Color darkText = Color.FromArgb(45, 45, 45);
+            Color mutedText = Color.FromArgb(90, 90, 90);
+
+            Font titleFont = new Font("微軟正黑體", 11F, FontStyle.Bold);
+            Font contentFont = new Font("微軟正黑體", 10F, FontStyle.Regular);
+            Font buttonFont = new Font("微軟正黑體", 11F, FontStyle.Bold);
+            Font statusFont = new Font("微軟正黑體", 10F, FontStyle.Regular);
+
+            this.Text = "卡牌井字對戰";
+            this.BackColor = formBg;
+            this.ForeColor = darkText;
+            this.Font = contentFont;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.StartPosition = FormStartPosition.CenterScreen;
+
+            grpStatus.Text = "遊戲資訊";
+            grpBoard.Text = "對戰棋盤";
+            grpDeck.Text = "牌庫";
+            grpPlayerHand.Text = "玩家區";
+            grpAIHand.Text = "AI 對手區";
+            grpActions.Text = "操作區";
+
+            StyleGroupBox(grpStatus, statusBg, titleFont, darkText);
+            StyleGroupBox(grpBoard, boardAreaBg, titleFont, darkText);
+            StyleGroupBox(grpDeck, deckZoneBg, titleFont, darkText);
+            StyleGroupBox(grpPlayerHand, playerZoneBg, titleFont, Color.FromArgb(130, 40, 40));
+            StyleGroupBox(grpAIHand, aiZoneBg, titleFont, Color.FromArgb(40, 70, 130));
+            StyleGroupBox(grpActions, actionZoneBg, titleFont, darkText);
+
+            lblTurn.Font = new Font("微軟正黑體", 11F, FontStyle.Bold);
+            lblTurn.ForeColor = Color.FromArgb(70, 70, 70);
+
+            lblDeckRemain.Font = new Font("微軟正黑體", 11F, FontStyle.Bold);
+            lblDeckRemain.ForeColor = Color.FromArgb(70, 70, 70);
+
+            lblMessage.Font = statusFont;
+            lblMessage.BackColor = Color.White;
+            lblMessage.ForeColor = mutedText;
+            lblMessage.BorderStyle = BorderStyle.FixedSingle;
+            lblMessage.Padding = new Padding(8, 4, 8, 4);
+
+            lblDeckTitle.Font = new Font("微軟正黑體", 10F, FontStyle.Bold);
+            lblDeckTitle.ForeColor = darkText;
+
+            lblDeckCount.Font = new Font("微軟正黑體", 10F, FontStyle.Bold);
+            lblDeckCount.ForeColor = darkText;
+
+            lblPlayerHandInfo.Font = new Font("微軟正黑體", 10F, FontStyle.Bold);
+            lblPlayerHandInfo.ForeColor = Color.FromArgb(130, 40, 40);
+
+            lblAIHandInfo.Font = new Font("微軟正黑體", 10F, FontStyle.Bold);
+            lblAIHandInfo.ForeColor = Color.FromArgb(40, 70, 130);
+
+            btnDrawCard.Text = "抽一張牌";
+            btnRestart.Text = "重新開始";
+
+            StyleButton(btnDrawCard, Color.FromArgb(66, 133, 244), Color.White, buttonFont);
+            StyleButton(btnRestart, Color.FromArgb(160, 82, 45), Color.White, buttonFont);
+
+            flpPlayerHand.BackColor = Color.Transparent;
+            flpAIHand.BackColor = Color.Transparent;
+            tblBoard.BackColor = Color.FromArgb(210, 202, 188);
+
+            StylePictureBoxes(picPlayerHand, Color.FromArgb(255, 252, 250));
+            StylePictureBoxes(picAIHand, Color.FromArgb(250, 252, 255));
+            StyleBoardCells();
+
+            picDeck.BackColor = Color.White;
+            picDeck.BorderStyle = BorderStyle.FixedSingle;
+
+            lblMessage.Text = "請先點選手牌，再點選九宮格空格放牌。若選到鬼牌，請點選場上已有牌。";
+        }
+
+        private void StyleGroupBox(GroupBox groupBox, Color backColor, Font font, Color foreColor)
+        {
+            groupBox.BackColor = backColor;
+            groupBox.ForeColor = foreColor;
+            groupBox.Font = font;
+            groupBox.Padding = new Padding(10);
+        }
+
+        private void StyleButton(Button button, Color backColor, Color foreColor, Font font)
+        {
+            button.BackColor = backColor;
+            button.ForeColor = foreColor;
+            button.Font = font;
+            button.FlatStyle = FlatStyle.Flat;
+            button.FlatAppearance.BorderSize = 0;
+            button.Cursor = Cursors.Hand;
+        }
+
+        private void StylePictureBoxes(PictureBox[] boxes, Color backColor)
+        {
+            foreach (PictureBox pic in boxes)
+            {
+                pic.BackColor = backColor;
+                pic.BorderStyle = BorderStyle.FixedSingle;
+                pic.SizeMode = PictureBoxSizeMode.Zoom;
+                pic.Margin = new Padding(6);
+                pic.Padding = new Padding(2);
+            }
+        }
+
+        private void StyleBoardCells()
+        {
+            for (int i = 0; i < boardCells.Length; i++)
+            {
+                boardCells[i].BackColor = EmptyCellColor;
+                boardCells[i].BorderStyle = BorderStyle.FixedSingle;
+                boardCells[i].Padding = new Padding(4);
+
+                picBoardCards[i].BackColor = Color.White;
+                picBoardCards[i].BorderStyle = BorderStyle.None;
+                picBoardCards[i].SizeMode = PictureBoxSizeMode.Zoom;
+
+                lblBoardValues[i].BackColor = Color.FromArgb(245, 245, 245);
+                lblBoardValues[i].ForeColor = Color.FromArgb(55, 55, 55);
+                lblBoardValues[i].Font = new Font("微軟正黑體", 12F, FontStyle.Bold);
+            }
         }
 
         #region 初始化與新局
@@ -183,7 +315,7 @@ namespace Poker
             actionTakenThisTurn = false;
             selectedHandIndex = -1;
             pendingJokerRemove = false;
-            statusMessage = "你的回合：抽牌、或出數值牌到空格、或出鬼牌移除場上已有的牌（每回合僅一項）。";
+            statusMessage = "你的回合：請先抽牌，或先點選手牌，再點選九宮格空格放牌";
 
             ClearBoard();
             playerHand.Clear();
@@ -566,7 +698,7 @@ namespace Poker
                 }
                 else
                 {
-                    statusMessage = "已選擇鬼牌（本回合僅此一動作），請點選場上一張已放置的牌以移除。";
+                    statusMessage = "已選擇鬼牌，請點選場上已有牌進行移除。";
                 }
             }
             else
@@ -1306,15 +1438,31 @@ namespace Poker
                 if (cell.Owner == Side.None)
                 {
                     boardCells[i].BackColor = EmptyCellColor;
+                    picBoardCards[i].BackColor = Color.White;
                     picBoardCards[i].Visible = false;
                     lblBoardValues[i].Text = string.Empty;
+                    lblBoardValues[i].BackColor = Color.FromArgb(245, 245, 245);
+                    lblBoardValues[i].ForeColor = Color.FromArgb(90, 90, 90);
+                }
+                else if (cell.Owner == Side.Player)
+                {
+                    boardCells[i].BackColor = PlayerCellColor;
+                    picBoardCards[i].BackColor = Color.FromArgb(255, 250, 250);
+                    picBoardCards[i].Image = GetBoardImage(cell);
+                    picBoardCards[i].Visible = true;
+                    lblBoardValues[i].Text = $"玩家 {cell.Value}";
+                    lblBoardValues[i].BackColor = Color.FromArgb(210, 88, 88);
+                    lblBoardValues[i].ForeColor = Color.White;
                 }
                 else
                 {
-                    boardCells[i].BackColor = cell.Owner == Side.Player ? PlayerCellColor : AICellColor;
+                    boardCells[i].BackColor = AICellColor;
+                    picBoardCards[i].BackColor = Color.FromArgb(248, 251, 255);
                     picBoardCards[i].Image = GetBoardImage(cell);
                     picBoardCards[i].Visible = true;
-                    lblBoardValues[i].Text = cell.Value.ToString();
+                    lblBoardValues[i].Text = $"AI {cell.Value}";
+                    lblBoardValues[i].BackColor = Color.FromArgb(75, 120, 200);
+                    lblBoardValues[i].ForeColor = Color.White;
                 }
             }
         }
@@ -1481,7 +1629,7 @@ namespace Poker
 
             if (selectedHandIndex < 0)
             {
-                statusMessage = "請先點選一張手牌。";
+                statusMessage = "請先點選手牌，再點選九宮格空格。";
                 UpdateStatusBar();
                 return;
             }
