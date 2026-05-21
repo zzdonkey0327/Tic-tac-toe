@@ -151,9 +151,36 @@ namespace Poker.Properties {
         /// <summary>
         ///   查詢類似 System.IO.MemoryStream 的類型 System.IO.UnmanagedMemoryStream 當地語系化資源。
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream loseplay {
+            get {
+                return ResourceManager.GetStream("loseplay", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 System.IO.MemoryStream 的類型 System.IO.UnmanagedMemoryStream 當地語系化資源。
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream startplay {
+            get {
+                return ResourceManager.GetStream("startplay", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 System.IO.MemoryStream 的類型 System.IO.UnmanagedMemoryStream 當地語系化資源。
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream win {
             get {
                 return ResourceManager.GetStream("win", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 System.IO.MemoryStream 的類型 System.IO.UnmanagedMemoryStream 當地語系化資源。
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream winplay {
+            get {
+                return ResourceManager.GetStream("winplay", resourceCulture);
             }
         }
     }

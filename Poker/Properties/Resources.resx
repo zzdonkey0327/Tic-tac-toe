@@ -145,7 +145,16 @@
   <data name="lose" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lose.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="loseplay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loseplay.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="startplay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\startplay.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="win" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\win.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="winplay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\winplay.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

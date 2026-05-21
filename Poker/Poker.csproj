@@ -93,7 +93,10 @@
     <Content Include="Resources\cardplay.wav" />
     <Content Include="Resources\joker.png" />
     <Content Include="Resources\lose.wav" />
+    <Content Include="Resources\loseplay.wav" />
+    <Content Include="Resources\startplay.wav" />
     <Content Include="Resources\win.wav" />
+    <Content Include="Resources\winplay.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

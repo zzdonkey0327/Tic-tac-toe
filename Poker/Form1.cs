@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -328,6 +328,7 @@ namespace Poker
             RefreshDeckUI();
             UpdateStatusBar();
             UpdateActionAvailability();
+            PlayStartSound();
         }
 
         private void ClearBoard()
@@ -1726,6 +1727,7 @@ namespace Poker
         private void btnRestart_Click(object sender, EventArgs e)
         {
             StartNewGame();
+
         }
 
         #endregion
@@ -1754,6 +1756,10 @@ namespace Poker
                 {
                     player.Play();
                 }
+                using (SoundPlayer player = new SoundPlayer(Properties.Resources.winplay))
+                {
+                    player.Play();
+                }
             }
             catch
             {
@@ -1765,6 +1771,10 @@ namespace Poker
             try
             {
                 using (SoundPlayer player = new SoundPlayer(Properties.Resources.lose))
+                {
+                    player.Play();
+                }
+                using (SoundPlayer player = new SoundPlayer(Properties.Resources.loseplay))
                 {
                     player.Play();
                 }
@@ -1787,6 +1797,20 @@ namespace Poker
             else
             {
                 PlayCardPlaySound();
+            }
+        }
+
+        private void PlayStartSound()
+        {
+            try
+            {
+                using (SoundPlayer player = new SoundPlayer(Properties.Resources.startplay))
+                {
+                    player.Play();
+                }
+            }
+            catch
+            {
             }
         }
 
