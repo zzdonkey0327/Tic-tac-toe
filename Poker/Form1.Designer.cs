@@ -132,7 +132,7 @@ namespace Poker
             this.lblDeckRemain.AutoSize = true;
             this.lblDeckRemain.Location = new System.Drawing.Point(150, 30);
             this.lblDeckRemain.Name = "lblDeckRemain";
-            this.lblDeckRemain.Size = new System.Drawing.Size(93, 23);
+            this.lblDeckRemain.Size = new System.Drawing.Size(132, 28);
             this.lblDeckRemain.TabIndex = 1;
             this.lblDeckRemain.Text = "牌庫：11 張";
             // 
@@ -141,7 +141,7 @@ namespace Poker
             this.lblTurn.AutoSize = true;
             this.lblTurn.Location = new System.Drawing.Point(16, 30);
             this.lblTurn.Name = "lblTurn";
-            this.lblTurn.Size = new System.Drawing.Size(93, 23);
+            this.lblTurn.Size = new System.Drawing.Size(122, 28);
             this.lblTurn.TabIndex = 0;
             this.lblTurn.Text = "回合：玩家";
             // 
@@ -172,13 +172,13 @@ namespace Poker
             this.tblBoard.Controls.Add(this.pnlCell7, 1, 2);
             this.tblBoard.Controls.Add(this.pnlCell8, 2, 2);
             this.tblBoard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblBoard.Location = new System.Drawing.Point(3, 27);
+            this.tblBoard.Location = new System.Drawing.Point(3, 33);
             this.tblBoard.Name = "tblBoard";
             this.tblBoard.RowCount = 3;
             this.tblBoard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tblBoard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tblBoard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tblBoard.Size = new System.Drawing.Size(414, 390);
+            this.tblBoard.Size = new System.Drawing.Size(414, 384);
             this.tblBoard.TabIndex = 0;
             // 
             // pnlCell0
@@ -189,18 +189,17 @@ namespace Poker
             this.pnlCell0.Controls.Add(this.picCell0);
             this.pnlCell0.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCell0.Location = new System.Drawing.Point(3, 3);
-            this.pnlCell0.Margin = new System.Windows.Forms.Padding(3);
             this.pnlCell0.Name = "pnlCell0";
-            this.pnlCell0.Size = new System.Drawing.Size(132, 124);
+            this.pnlCell0.Size = new System.Drawing.Size(131, 121);
             this.pnlCell0.TabIndex = 0;
             // 
             // lblCell0
             // 
             this.lblCell0.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblCell0.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.lblCell0.Location = new System.Drawing.Point(0, 96);
+            this.lblCell0.Location = new System.Drawing.Point(0, 93);
             this.lblCell0.Name = "lblCell0";
-            this.lblCell0.Size = new System.Drawing.Size(130, 26);
+            this.lblCell0.Size = new System.Drawing.Size(129, 26);
             this.lblCell0.TabIndex = 1;
             this.lblCell0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -210,7 +209,7 @@ namespace Poker
             this.picCell0.Image = global::Poker.Properties.Resources.back;
             this.picCell0.Location = new System.Drawing.Point(0, 0);
             this.picCell0.Name = "picCell0";
-            this.picCell0.Size = new System.Drawing.Size(130, 96);
+            this.picCell0.Size = new System.Drawing.Size(129, 119);
             this.picCell0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picCell0.TabIndex = 0;
             this.picCell0.TabStop = false;
@@ -222,17 +221,16 @@ namespace Poker
             this.pnlCell1.Controls.Add(this.lblCell1);
             this.pnlCell1.Controls.Add(this.picCell1);
             this.pnlCell1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlCell1.Location = new System.Drawing.Point(141, 3);
-            this.pnlCell1.Margin = new System.Windows.Forms.Padding(3);
+            this.pnlCell1.Location = new System.Drawing.Point(140, 3);
             this.pnlCell1.Name = "pnlCell1";
-            this.pnlCell1.Size = new System.Drawing.Size(132, 124);
+            this.pnlCell1.Size = new System.Drawing.Size(132, 121);
             this.pnlCell1.TabIndex = 1;
             // 
             // lblCell1
             // 
             this.lblCell1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblCell1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.lblCell1.Location = new System.Drawing.Point(0, 96);
+            this.lblCell1.Location = new System.Drawing.Point(0, 93);
             this.lblCell1.Name = "lblCell1";
             this.lblCell1.Size = new System.Drawing.Size(130, 26);
             this.lblCell1.TabIndex = 1;
@@ -244,7 +242,7 @@ namespace Poker
             this.picCell1.Image = global::Poker.Properties.Resources.back;
             this.picCell1.Location = new System.Drawing.Point(0, 0);
             this.picCell1.Name = "picCell1";
-            this.picCell1.Size = new System.Drawing.Size(130, 96);
+            this.picCell1.Size = new System.Drawing.Size(130, 119);
             this.picCell1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picCell1.TabIndex = 0;
             this.picCell1.TabStop = false;
@@ -256,19 +254,18 @@ namespace Poker
             this.pnlCell2.Controls.Add(this.lblCell2);
             this.pnlCell2.Controls.Add(this.picCell2);
             this.pnlCell2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlCell2.Location = new System.Drawing.Point(279, 3);
-            this.pnlCell2.Margin = new System.Windows.Forms.Padding(3);
+            this.pnlCell2.Location = new System.Drawing.Point(278, 3);
             this.pnlCell2.Name = "pnlCell2";
-            this.pnlCell2.Size = new System.Drawing.Size(132, 124);
+            this.pnlCell2.Size = new System.Drawing.Size(133, 121);
             this.pnlCell2.TabIndex = 2;
             // 
             // lblCell2
             // 
             this.lblCell2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblCell2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.lblCell2.Location = new System.Drawing.Point(0, 96);
+            this.lblCell2.Location = new System.Drawing.Point(0, 93);
             this.lblCell2.Name = "lblCell2";
-            this.lblCell2.Size = new System.Drawing.Size(130, 26);
+            this.lblCell2.Size = new System.Drawing.Size(131, 26);
             this.lblCell2.TabIndex = 1;
             this.lblCell2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -278,7 +275,7 @@ namespace Poker
             this.picCell2.Image = global::Poker.Properties.Resources.back;
             this.picCell2.Location = new System.Drawing.Point(0, 0);
             this.picCell2.Name = "picCell2";
-            this.picCell2.Size = new System.Drawing.Size(130, 96);
+            this.picCell2.Size = new System.Drawing.Size(131, 119);
             this.picCell2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picCell2.TabIndex = 0;
             this.picCell2.TabStop = false;
@@ -290,19 +287,18 @@ namespace Poker
             this.pnlCell3.Controls.Add(this.lblCell3);
             this.pnlCell3.Controls.Add(this.picCell3);
             this.pnlCell3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlCell3.Location = new System.Drawing.Point(3, 133);
-            this.pnlCell3.Margin = new System.Windows.Forms.Padding(3);
+            this.pnlCell3.Location = new System.Drawing.Point(3, 130);
             this.pnlCell3.Name = "pnlCell3";
-            this.pnlCell3.Size = new System.Drawing.Size(132, 124);
+            this.pnlCell3.Size = new System.Drawing.Size(131, 122);
             this.pnlCell3.TabIndex = 3;
             // 
             // lblCell3
             // 
             this.lblCell3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblCell3.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.lblCell3.Location = new System.Drawing.Point(0, 96);
+            this.lblCell3.Location = new System.Drawing.Point(0, 94);
             this.lblCell3.Name = "lblCell3";
-            this.lblCell3.Size = new System.Drawing.Size(130, 26);
+            this.lblCell3.Size = new System.Drawing.Size(129, 26);
             this.lblCell3.TabIndex = 1;
             this.lblCell3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -312,7 +308,7 @@ namespace Poker
             this.picCell3.Image = global::Poker.Properties.Resources.back;
             this.picCell3.Location = new System.Drawing.Point(0, 0);
             this.picCell3.Name = "picCell3";
-            this.picCell3.Size = new System.Drawing.Size(130, 96);
+            this.picCell3.Size = new System.Drawing.Size(129, 120);
             this.picCell3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picCell3.TabIndex = 0;
             this.picCell3.TabStop = false;
@@ -324,17 +320,16 @@ namespace Poker
             this.pnlCell4.Controls.Add(this.lblCell4);
             this.pnlCell4.Controls.Add(this.picCell4);
             this.pnlCell4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlCell4.Location = new System.Drawing.Point(141, 133);
-            this.pnlCell4.Margin = new System.Windows.Forms.Padding(3);
+            this.pnlCell4.Location = new System.Drawing.Point(140, 130);
             this.pnlCell4.Name = "pnlCell4";
-            this.pnlCell4.Size = new System.Drawing.Size(132, 124);
+            this.pnlCell4.Size = new System.Drawing.Size(132, 122);
             this.pnlCell4.TabIndex = 4;
             // 
             // lblCell4
             // 
             this.lblCell4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblCell4.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.lblCell4.Location = new System.Drawing.Point(0, 96);
+            this.lblCell4.Location = new System.Drawing.Point(0, 94);
             this.lblCell4.Name = "lblCell4";
             this.lblCell4.Size = new System.Drawing.Size(130, 26);
             this.lblCell4.TabIndex = 1;
@@ -346,7 +341,7 @@ namespace Poker
             this.picCell4.Image = global::Poker.Properties.Resources.back;
             this.picCell4.Location = new System.Drawing.Point(0, 0);
             this.picCell4.Name = "picCell4";
-            this.picCell4.Size = new System.Drawing.Size(130, 96);
+            this.picCell4.Size = new System.Drawing.Size(130, 120);
             this.picCell4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picCell4.TabIndex = 0;
             this.picCell4.TabStop = false;
@@ -358,19 +353,18 @@ namespace Poker
             this.pnlCell5.Controls.Add(this.lblCell5);
             this.pnlCell5.Controls.Add(this.picCell5);
             this.pnlCell5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlCell5.Location = new System.Drawing.Point(279, 133);
-            this.pnlCell5.Margin = new System.Windows.Forms.Padding(3);
+            this.pnlCell5.Location = new System.Drawing.Point(278, 130);
             this.pnlCell5.Name = "pnlCell5";
-            this.pnlCell5.Size = new System.Drawing.Size(132, 124);
+            this.pnlCell5.Size = new System.Drawing.Size(133, 122);
             this.pnlCell5.TabIndex = 5;
             // 
             // lblCell5
             // 
             this.lblCell5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblCell5.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.lblCell5.Location = new System.Drawing.Point(0, 96);
+            this.lblCell5.Location = new System.Drawing.Point(0, 94);
             this.lblCell5.Name = "lblCell5";
-            this.lblCell5.Size = new System.Drawing.Size(130, 26);
+            this.lblCell5.Size = new System.Drawing.Size(131, 26);
             this.lblCell5.TabIndex = 1;
             this.lblCell5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -380,7 +374,7 @@ namespace Poker
             this.picCell5.Image = global::Poker.Properties.Resources.back;
             this.picCell5.Location = new System.Drawing.Point(0, 0);
             this.picCell5.Name = "picCell5";
-            this.picCell5.Size = new System.Drawing.Size(130, 96);
+            this.picCell5.Size = new System.Drawing.Size(131, 120);
             this.picCell5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picCell5.TabIndex = 0;
             this.picCell5.TabStop = false;
@@ -392,19 +386,18 @@ namespace Poker
             this.pnlCell6.Controls.Add(this.lblCell6);
             this.pnlCell6.Controls.Add(this.picCell6);
             this.pnlCell6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlCell6.Location = new System.Drawing.Point(3, 263);
-            this.pnlCell6.Margin = new System.Windows.Forms.Padding(3);
+            this.pnlCell6.Location = new System.Drawing.Point(3, 258);
             this.pnlCell6.Name = "pnlCell6";
-            this.pnlCell6.Size = new System.Drawing.Size(132, 124);
+            this.pnlCell6.Size = new System.Drawing.Size(131, 123);
             this.pnlCell6.TabIndex = 6;
             // 
             // lblCell6
             // 
             this.lblCell6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblCell6.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.lblCell6.Location = new System.Drawing.Point(0, 96);
+            this.lblCell6.Location = new System.Drawing.Point(0, 95);
             this.lblCell6.Name = "lblCell6";
-            this.lblCell6.Size = new System.Drawing.Size(130, 26);
+            this.lblCell6.Size = new System.Drawing.Size(129, 26);
             this.lblCell6.TabIndex = 1;
             this.lblCell6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -414,7 +407,7 @@ namespace Poker
             this.picCell6.Image = global::Poker.Properties.Resources.back;
             this.picCell6.Location = new System.Drawing.Point(0, 0);
             this.picCell6.Name = "picCell6";
-            this.picCell6.Size = new System.Drawing.Size(130, 96);
+            this.picCell6.Size = new System.Drawing.Size(129, 121);
             this.picCell6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picCell6.TabIndex = 0;
             this.picCell6.TabStop = false;
@@ -426,17 +419,16 @@ namespace Poker
             this.pnlCell7.Controls.Add(this.lblCell7);
             this.pnlCell7.Controls.Add(this.picCell7);
             this.pnlCell7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlCell7.Location = new System.Drawing.Point(141, 263);
-            this.pnlCell7.Margin = new System.Windows.Forms.Padding(3);
+            this.pnlCell7.Location = new System.Drawing.Point(140, 258);
             this.pnlCell7.Name = "pnlCell7";
-            this.pnlCell7.Size = new System.Drawing.Size(132, 124);
+            this.pnlCell7.Size = new System.Drawing.Size(132, 123);
             this.pnlCell7.TabIndex = 7;
             // 
             // lblCell7
             // 
             this.lblCell7.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblCell7.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.lblCell7.Location = new System.Drawing.Point(0, 96);
+            this.lblCell7.Location = new System.Drawing.Point(0, 95);
             this.lblCell7.Name = "lblCell7";
             this.lblCell7.Size = new System.Drawing.Size(130, 26);
             this.lblCell7.TabIndex = 1;
@@ -448,7 +440,7 @@ namespace Poker
             this.picCell7.Image = global::Poker.Properties.Resources.back;
             this.picCell7.Location = new System.Drawing.Point(0, 0);
             this.picCell7.Name = "picCell7";
-            this.picCell7.Size = new System.Drawing.Size(130, 96);
+            this.picCell7.Size = new System.Drawing.Size(130, 121);
             this.picCell7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picCell7.TabIndex = 0;
             this.picCell7.TabStop = false;
@@ -460,19 +452,18 @@ namespace Poker
             this.pnlCell8.Controls.Add(this.lblCell8);
             this.pnlCell8.Controls.Add(this.picCell8);
             this.pnlCell8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlCell8.Location = new System.Drawing.Point(279, 263);
-            this.pnlCell8.Margin = new System.Windows.Forms.Padding(3);
+            this.pnlCell8.Location = new System.Drawing.Point(278, 258);
             this.pnlCell8.Name = "pnlCell8";
-            this.pnlCell8.Size = new System.Drawing.Size(132, 124);
+            this.pnlCell8.Size = new System.Drawing.Size(133, 123);
             this.pnlCell8.TabIndex = 8;
             // 
             // lblCell8
             // 
             this.lblCell8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblCell8.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.lblCell8.Location = new System.Drawing.Point(0, 96);
+            this.lblCell8.Location = new System.Drawing.Point(0, 95);
             this.lblCell8.Name = "lblCell8";
-            this.lblCell8.Size = new System.Drawing.Size(130, 26);
+            this.lblCell8.Size = new System.Drawing.Size(131, 26);
             this.lblCell8.TabIndex = 1;
             this.lblCell8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -482,7 +473,7 @@ namespace Poker
             this.picCell8.Image = global::Poker.Properties.Resources.back;
             this.picCell8.Location = new System.Drawing.Point(0, 0);
             this.picCell8.Name = "picCell8";
-            this.picCell8.Size = new System.Drawing.Size(130, 96);
+            this.picCell8.Size = new System.Drawing.Size(131, 121);
             this.picCell8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picCell8.TabIndex = 0;
             this.picCell8.TabStop = false;
@@ -505,7 +496,7 @@ namespace Poker
             this.lblDeckCount.AutoSize = true;
             this.lblDeckCount.Location = new System.Drawing.Point(16, 128);
             this.lblDeckCount.Name = "lblDeckCount";
-            this.lblDeckCount.Size = new System.Drawing.Size(86, 23);
+            this.lblDeckCount.Size = new System.Drawing.Size(104, 28);
             this.lblDeckCount.TabIndex = 2;
             this.lblDeckCount.Text = "剩餘：11";
             // 
@@ -514,7 +505,7 @@ namespace Poker
             this.lblDeckTitle.AutoSize = true;
             this.lblDeckTitle.Location = new System.Drawing.Point(16, 28);
             this.lblDeckTitle.Name = "lblDeckTitle";
-            this.lblDeckTitle.Size = new System.Drawing.Size(86, 23);
+            this.lblDeckTitle.Size = new System.Drawing.Size(100, 28);
             this.lblDeckTitle.TabIndex = 1;
             this.lblDeckTitle.Text = "牌庫牌堆";
             // 
@@ -545,7 +536,7 @@ namespace Poker
             this.lblPlayerHandInfo.AutoSize = true;
             this.lblPlayerHandInfo.Location = new System.Drawing.Point(16, 28);
             this.lblPlayerHandInfo.Name = "lblPlayerHandInfo";
-            this.lblPlayerHandInfo.Size = new System.Drawing.Size(99, 23);
+            this.lblPlayerHandInfo.Size = new System.Drawing.Size(125, 28);
             this.lblPlayerHandInfo.TabIndex = 1;
             this.lblPlayerHandInfo.Text = "手牌：0 / 3";
             // 
@@ -612,7 +603,7 @@ namespace Poker
             this.lblAIHandInfo.AutoSize = true;
             this.lblAIHandInfo.Location = new System.Drawing.Point(16, 28);
             this.lblAIHandInfo.Name = "lblAIHandInfo";
-            this.lblAIHandInfo.Size = new System.Drawing.Size(120, 23);
+            this.lblAIHandInfo.Size = new System.Drawing.Size(146, 28);
             this.lblAIHandInfo.TabIndex = 1;
             this.lblAIHandInfo.Text = "AI 手牌：0 張";
             // 
@@ -696,7 +687,7 @@ namespace Poker
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 600);
             this.Controls.Add(this.grpActions);
